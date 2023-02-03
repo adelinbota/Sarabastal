@@ -30,4 +30,4 @@
         </div>
     </div>
 </div>
-<?php require_once RUTA_APP.'/vistas/inc/footer.php'?>
+<?php require_once RUTA_APP.'/vistas/inc/footer.php'?> 
