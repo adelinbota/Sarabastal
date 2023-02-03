@@ -25,4 +25,4 @@
     define('DB_USUARIO', 'root');
     define('DB_PASSWORD', 'root_Root1');
     define('DB_NOMBRE', 'sarabastal');
-?>
+?> 

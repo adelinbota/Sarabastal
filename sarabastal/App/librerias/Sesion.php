@@ -38,4 +38,4 @@ class Sesion{
         $_SESSION = array();
     }    
     
-}
+} 

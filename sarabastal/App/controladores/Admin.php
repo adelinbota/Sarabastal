@@ -8,7 +8,7 @@
         public function index(){
 
             $this->datos['personas'] = $this->adminModelo->obtenerPersonas();
-
+ 
             $this->vista('admin/gestion', $this->datos);
         }
 
