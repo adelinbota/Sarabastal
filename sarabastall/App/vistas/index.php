@@ -85,10 +85,9 @@
 
     
   
+<!--    
 
-   
-
-    <!-- ======= Contact Section ======= 
+    ======= Contact Section ======= 
     <section id="contact" class="contact section-bg">
       <div class="container">
 
@@ -153,9 +152,9 @@
         </div>
 
       </div>
-    </section>End Contact Section
+    </section>
 
-  </main> End #main -->
+  </main>  -->
 
 
 <?php require_once RUTA_APP.'/vistas/inc/footer.php'?>

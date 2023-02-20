@@ -15,6 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
   <!-- Vendor CSS Files -->
   <link href="<?php echo RUTA_URL ?>/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -25,7 +26,8 @@
   <link href="<?php echo RUTA_URL ?>/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?php echo RUTA_URL ?>/assets/css/style.css" rel="stylesheet">
+  <link href="<?php echo RUTA_URL ?>/public/css/estilos.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo RUTA_URL ?>/assets/css/style.css" rel="stylesheet" type="text/css">
 
   <!-- =======================================================
   * Template Name: Knight - v4.3.0

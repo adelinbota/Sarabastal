@@ -1,6 +1,6 @@
 <?php
     class Admin extends Controlador{
-        public function __construct(){
+        public function __construct(){ 
             Sesion::iniciarSesion($this->datos);
             $this->adminModelo = $this->modelo('AdminModelo');
         }
@@ -18,9 +18,9 @@
 
         } 
 
-        public function anadirPersona(){
+        public function anadirPersona(){ 
             $this->datos['rolesPermitidos'] = [100];
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
                 $persona = $_POST;
             
                 if ($this->adminModelo->anadirPersona($persona)){
@@ -31,22 +31,28 @@
                 }
             }else{
                 $this->datos['tipoPersona'] = $this->adminModelo->obtenerTipoPersonas();
-                $this->vista('admin/personal/anadir_persona');
+                $this->datos['cursos'] = $this->adminModelo->obtenerCursos();
+                $this->vista('admin/personal/anadir_persona', $this->datos);
             }
         }
 
         public function editarPersona($idUsu){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $persona = $_POST;
 
-                if ($this->adminModelo->editarPersona($persona)){
-                    redireccionar("/admin/gestion");
-    
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $persona = $_POST; 
+                print_r($persona);
+                if ($this->adminModelo->editarPersona($persona, $idUsu)){
+                    redireccionar("/admin/verPersona");
+                    
                 }else{
                     echo "se ha producido un error!!!";
                 }
+
+            
             }else{
-                $this->datos['personas'] = $this->adminModelo->obtenerPersonas();
+                $this->datos['personas'] = $this->adminModelo->obtenerPersona($idUsu);
+                $this->datos['tipoPersona'] = $this->adminModelo->obtenerTipoPersonas();
+                $this->vista('admin/personal/editar_personas', $this->datos);
             }
         }
 
